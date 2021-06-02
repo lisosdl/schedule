@@ -1,0 +1,21 @@
+<div class='scheduler'>
+	<div class='nav'>
+		<span class='year'>{{ year }}</span>
+		<span class='month'>{{ month }}</span>
+	</div>
+	
+	<ul class='yoils'>
+		{% for yoil in yoilsEn %}
+		<li>{{ yoil }}</li>
+		{% endfor %}
+	</ul>
+	
+	<ul class='days'>
+		{% for day in days %}
+		<li class='day' data-stamp='{{ day.stamp }}'>
+			<div class='no'>{{ day.day }}</div>
+			<div class='schedules'></div>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
